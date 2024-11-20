@@ -16,6 +16,9 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1,
@@ -53,9 +56,8 @@ ol {
   flex-direction: row;
   align-items: end;
   width: 100%;
-  height: fit-content;
+  padding: 0 30px 55px;
   gap: 30px;
-  padding: 133px 0 0;
 }
 
 .button {
@@ -96,6 +98,7 @@ ol {
   flex-direction: column;
   justify-content: end;
   max-height: 456px;
+  gap: 16px;
 }
 
 .result__video-container {
@@ -119,7 +122,6 @@ ol {
   flex-direction: row;
   justify-content: space-between;
   align-items: end;
-  padding-top: 16px;
 }
 
 .search-form__fieldset {
@@ -140,7 +142,7 @@ ol {
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
 }
 
 .search-form__textfield {
@@ -149,9 +151,8 @@ ol {
   border: none;
   color: #fff;
   font-family: inherit;
-  cursor: pointer;
   appearance: none;
-  padding: 2.5px 0;
+  padding: 3px 0;
   text-align: left;
 }
 
@@ -171,6 +172,11 @@ input[type="text"]:focus {
   outline: none;
 }
 
+input[type="text"]:active {
+  outline: none;
+  border: none;
+}
+
 .search-form__label:has(input[type="text"]:focus-visible) {
   border: 1px solid #fff;
   outline: none;
@@ -183,6 +189,7 @@ input[type="text"]:focus {
 .search-form__checkbox-list {
   display: flex;
   flex-direction: row;
+  gap: 15px;
 }
 
 .search-form__label:has(input[type="checkbox"]):focus {
@@ -191,10 +198,6 @@ input[type="text"]:focus {
 
 .search-form__label:focus-visible {
   border: 1px solid #fff;
-}
-
-.search-form__label:has(input[type="checkbox"]):not(:last-child) {
-  padding-right: 15px;
 }
 
 .search-form__pseudo-checkbox {
@@ -209,8 +212,16 @@ input[type="text"]:focus {
   cursor: pointer;
 }
 
+.search-form__label:has(input[type="checkbox"]):hover {
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  cursor: pointer;
+}
+
 .search-form__label-text {
   font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .search-form__label-text:active {
@@ -266,6 +277,7 @@ input[type="checkbox"]:checked + span::after,
 
 .content__video-card-thumbnail {
   width: 194px;
+  height: 103px;
   object-fit: cover;
   object-position: center;
 }
@@ -285,13 +297,14 @@ input[type="checkbox"]:checked + span::after,
   padding-bottom: 26px;
   font-family: Oswald, sans-serif;
   color: #fff;
-  line-height: 70.5px;
-  font-size: 75px;
   font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
   text-transform: uppercase;
 }
 
 .content__accent {
+  font-family: inherit;
   color: #545050;
 }
 
