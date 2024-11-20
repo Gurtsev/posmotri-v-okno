@@ -1,1 +1,1 @@
-https://github.com/Gurtsev/posmotri-v-okno
+https://github.com/Gurtsev/posmotri_v_okno
