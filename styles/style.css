@@ -253,7 +253,6 @@ input[type="checkbox"]:checked + span::after,
 /*Правая часть*/
 
 .content__details {
-  inline-size: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -264,6 +263,10 @@ input[type="checkbox"]:checked + span::after,
   max-block-size: 298px;
 }
 
+.content__list-item {
+  inline-size: inherit;
+}
+
 .content__list-item:not(:last-child) {
   padding-block-end: 30px;
 }
@@ -271,17 +274,22 @@ input[type="checkbox"]:checked + span::after,
 .content__video-card {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .content__video-card-thumbnail {
   inline-size: 194px;
   block-size: 103px;
   object-fit: cover;
+  flex-shrink: 0;
   object-position: center;
 }
 
 .content__video-card-description-container {
-  flex-grow: 1;
+  inline-size: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .title {
